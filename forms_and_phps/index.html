@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Last Name</title>
+</head>
+<body>
+    <form id="lastNameForm" onsubmit="checkLastName(event)">
+        <label>Password= </label>
+        <input type="password" id="lastNameInput" name="last_name" placeholder="Anything" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkLastName(event) {
+            event.preventDefault();
+            
+            // Get the input value
+            var lastName = document.getElementById("lastNameInput").value;
+
+            // Check if the last name is "Microsoft"
+            if (lastName.toLowerCase() === "sup") {
+                // Open Wikipedia page for Microsoft in a new tab
+                window.open("lala.html", "_blank");
+            } else {
+                // Display "Invalid" if last name is not "Microsoft"
+                alert("Invalid");
+            }
+        }
+    </script>
+</body>
+</html>
+
